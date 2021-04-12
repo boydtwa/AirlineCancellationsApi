@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "ac701254-64c9-4124-b8d2-53c693ed829f",
+		"name": "Airport Cancellation Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Flight Count Maximum 10001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"take\": 10,\r\n    \"query\": {\r\n        \"airportCode\": \"SEA\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/airport-cancellations/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"airport-cancellations",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Count Minimum 10001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"take\": 10,\r\n    \"query\": {\r\n        \"flightCount\": {\r\n            \"minimum\": 10000\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/airport-cancellations/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"airport-cancellations",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take 10 for Flight Count maximum 10001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"take\": 10,\r\n    \"query\": {\r\n        \"flightCount\":{\r\n            \"maximum\": 10001\r\n        } \r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/airport-cancellations/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"airport-cancellations",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take 10 for Sea-Tac Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"take\": 10,\r\n    \"query\": {\r\n        \"airportCode\": \"SEA\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/airport-cancellations/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"airport-cancellations",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skip 10 Take 10 for Sea-Tac",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"skip\": 10,\r\n    \"take\": 10,\r\n    \"query\": {\r\n        \"airportCode\": \"SEA\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/airport-cancellations/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"airport-cancellations",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
